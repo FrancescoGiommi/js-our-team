@@ -45,3 +45,9 @@ const teamMembers = [
     img: "img/female3.png",
   },
 ];
+
+/* dichiaro le classi degli elementi */
+const profileImage = document.getElementsByClassName("image");
+const profileName = document.getElementsByClassName("name");
+const profileRole = document.getElementsByClassName("role");
+const profileEmail = document.getElementsByClassName("email");
