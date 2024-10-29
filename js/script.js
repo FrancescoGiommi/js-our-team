@@ -47,7 +47,14 @@ const teamMembers = [
 ];
 
 /* dichiaro le classi degli elementi */
-const profileImage = document.getElementsByClassName("image");
-const profileName = document.getElementsByClassName("name");
-const profileRole = document.getElementsByClassName("role");
-const profileEmail = document.getElementsByClassName("email");
+const profileImage = document.getElementById("image");
+const profileName = document.getElementById("name");
+const profileRole = document.getElementById("role");
+const profileEmail = document.getElementById("email");
+
+const imageProfile = profileImage.value;
+const nameProfile = profileName.value;
+const roleProfile = profileRole.value;
+const emailProfile = profileEmail.value;
+
+console.log(imageProfile, nameProfile, roleProfile, emailProfile);
