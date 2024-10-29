@@ -49,13 +49,19 @@ const teamMembers = [
 /* dichiaro le classi degli elementi */
 
 const cardOutput = document.getElementById("output-card");
-const row = document.getElementById("row");
-row.style.display = "flex";
+const flexContent = document.getElementById("flex");
+
+/* aggiungo flex */
+cardOutput.style.display = "flex";
+cardOutput.style.flexWrap = "wrap";
+cardOutput.style.justifyContent = "space-between";
+
 let cardHtml = "";
+/* aggiungo la card per ogni membro con forEach */
 teamMembers.forEach((member) => {
   const memberCard = `
   <div class="card mb-3" style="max-width: 540px">
-            <div class="row g-0">
+            <div class="row  g-0">
               <div class="col-md-4">
                 <img
                   src="${member.img}"
@@ -75,4 +81,6 @@ teamMembers.forEach((member) => {
   `;
   cardHtml += memberCard;
 });
+
+/* aggiungo la card nel DOM */
 cardOutput.innerHTML = cardHtml;
