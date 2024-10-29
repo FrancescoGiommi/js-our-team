@@ -47,24 +47,27 @@ const teamMembers = [
 ];
 
 /* dichiaro le classi degli elementi */
+
 const cardOutput = document.getElementById("output-card");
+const row = document.getElementById("row");
+row.style.display = "flex";
 let cardHtml = "";
 teamMembers.forEach((member) => {
   const memberCard = `
-  ù<div class="card mb-3" style="max-width: 540px">
+  <div class="card mb-3" style="max-width: 540px">
             <div class="row g-0">
               <div class="col-md-4">
                 <img
-                  src="..."
+                  src="${member.img}"
                   class="img-fluid rounded-start image"
                   alt="..."
                 />
               </div>
               <div class="col-md-8">
                 <div class="card-body">
-                  <h2 class="card-title h5 name">Nome e Cognome</h2>
-                  <span class="card-text d-block role">Ruolo</span>
-                  <span class="card-text email">Email</span>
+                  <h2 class="card-title h5 name">${member.name}</h2>
+                  <span class="card-text d-block role">${member.role}</span>
+                  <span class="card-text email">${member.email}</span>
                 </div>
               </div>
             </div>
