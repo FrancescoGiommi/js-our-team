@@ -48,11 +48,16 @@ const teamMembers = [
 
 /* dichiaro le classi degli elementi */
 const cardOutput = document.getElementById("output-card");
+const formUploadCard = document.getElementById("form-upload-card");
+const btnGenerateCard = document.getElementById("btn-generate-card");
 
 /* genero le card nel DOM con forEach */
 let cardHtml = "";
-teamMembers.forEach((member) => {
-  const cardMember = `
+
+formUploadCard.addEventListener("submit", (event) => {
+  event.preventDefault();
+  teamMembers.forEach((member) => {
+    const cardMember = `
        <div class="col-lg-4 col-md-6 col-xs-12">
           <div class="card mb-3" style="max-width: 540px">
             <div class="row  g-0">
@@ -74,6 +79,7 @@ teamMembers.forEach((member) => {
           </div>
         </div>
   `;
-  cardHtml += cardMember;
+    cardHtml += cardMember;
+  });
+  cardOutput.innerHTML = cardHtml;
 });
-cardOutput.innerHTML = cardHtml;

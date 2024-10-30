@@ -25,8 +25,27 @@
             vero enim.
           </p>
         </div>
+        <form class="row d-flex g-3 m-auto form-control" id="form-upload-card">
+          <div class="col-4">
+            <label for="name-member">Nome e Cognome</label>
+            <input type="text" class="form-control" id="name-member" />
+          </div>
+          <div class="col-4">
+            <label for="name-member">Ruolo</label>
+            <input type="text" class="form-control" id="role-member" />
+          </div>
+          <div class="col-4">
+            <label for="name-member">Email</label>
+            <input type="email" class="form-control" id="email-member" />
+          </div>
+          <div class="d-grid gap-2">
+            <button class="btn btn-primary" id="btn-generate-card">
+              Button
+            </button>
+          </div>
+        </form>
       </div>
-      <div class="row g-3" id="output-card">
+      <div class="row g-3 m-3" id="output-card">
         <!-- <div class="col-4">
           <div class="card mb-3" style="max-width: 540px">
             <div class="row g-0">
