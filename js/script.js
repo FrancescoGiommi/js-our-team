@@ -53,9 +53,9 @@ const cardOutput = document.getElementById("output-card");
 let cardHtml = "";
 teamMembers.forEach((member) => {
   const cardMember = `
-       <div class="col-4">
+       <div class="col-lg-4 col-md-6 col-xs-12">
           <div class="card mb-3" style="max-width: 540px">
-            <div class="row g-0">
+            <div class="row  g-0">
               <div class="col-md-4">
                 <img
                   src="${member.img}"
